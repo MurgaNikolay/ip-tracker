@@ -1,0 +1,10 @@
+<table class="table">
+    <% entries.each do |entry| %>
+      <tr>
+          <td><%= entry.id %></td>
+          <td><a target="_blank" href="http://www.infobyip.com/ip-<%= entry.ipaddress %>.html"><%= entry.ipaddress %></a></td>
+          <td><%= entry.visited_at %></td>
+          <td><%= entry.user_agent %></td>
+      </tr>
+    <% end %>
+</table>
