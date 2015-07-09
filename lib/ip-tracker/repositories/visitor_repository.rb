@@ -8,7 +8,7 @@ class VisitorRepository
 
   def self.by_visited
     query do
-      order(:visited_at)
+      desc(:visited_at)
     end
   end
 end

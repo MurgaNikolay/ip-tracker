@@ -7,6 +7,7 @@ Lotus::Model.migration do
       column :user_agent, String, text: true
 
       index [:visited_at, :ipaddress]
+      index [:visited_at]
     end
   end
 end
