@@ -3,6 +3,9 @@ module Web::Controllers::Home
     include Web::Action
 
     def call(params)
+      puts params.inspect
+      puts params.env.inspect
+
       visitor = Visitor.new
       visitor.visited_at = DateTime.now
       visitor.ipaddress = params.env['CLIENT_IP'] || params.env['REMOTE_ADDR']
